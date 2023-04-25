@@ -6,21 +6,18 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 12:09:06 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/25 19:38:53 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/04/25 20:11:00 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+int	ft_strlen(char *str)
 {
-	int	len;
+	int	length;
 
-	len = 0;
-	while (*str)
-	{
-		len++;
-		str++;
-	}
-	return (len);
+	length = 0;
+	while (*str++)
+		length++;
+	return (length);
 }

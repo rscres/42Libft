@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/08 17:58:28 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/25 20:09:51 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/03/17 11:21:27 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/04/25 12:45:29 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+char	*ft_strstr(char *str, char *to_find)
 {
-	char	*temp;
+	int	i;
 
-	temp = dest;
-	while (*src != '\0')
-		*dest++ = *src++;
-	*dest = '\0';
-	return (temp);
+	i = 0;
+	if (*to_find == '\0')
+		return (str);
+	while (str[i] != '\0')
+	{
+		if ((str[i] == to_find[0]) && ft_strcmp(&str[i], to_find))
+			return (&str[i]);
+		i++;
+	}
+	return (0);
 }

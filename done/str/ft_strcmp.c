@@ -6,13 +6,13 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 12:13:33 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/25 19:37:51 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/04/25 20:10:43 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
 	while (*s1 || *s2)
 	{

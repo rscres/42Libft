@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/08 17:58:28 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/25 20:09:51 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/04/24 14:57:55 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/04/25 20:12:51 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+int	ft_toupper(int a)
 {
-	char	*temp;
-
-	temp = dest;
-	while (*src != '\0')
-		*dest++ = *src++;
-	*dest = '\0';
-	return (temp);
+	if (a >= 97 && a <= 122)
+		return (a - 32);
+	return (a);
 }

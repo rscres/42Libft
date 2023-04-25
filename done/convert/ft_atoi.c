@@ -1,24 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/08 17:58:28 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/25 20:09:51 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/03/17 15:42:42 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/04/25 19:57:00 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+int	ft_atoi(char *str)
 {
-	char	*temp;
+	int	x;
+	int	minus;
 
-	temp = dest;
-	while (*src != '\0')
-		*dest++ = *src++;
-	*dest = '\0';
-	return (temp);
+	x = 0;
+	minus = 1;
+	while (*str)
+	{
+		if (*str == '-')
+		{
+			if (!(ft_isdigit(*(str + 1))))
+				return (0);
+			minus = -1;
+		}
+		if (ft_isdigit(*str))
+		{
+			x = x * 10 + (*str - '0');
+			if (!(ft_isdigit(*(str + 1))))
+				break ;
+		}
+		str++;
+	}
+	if (minus == -1)
+		x *= -1;
+	return (x);
 }
