@@ -6,13 +6,13 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 11:21:23 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/25 20:12:04 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/04/25 20:28:56 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	int	i;
 	int	offset;
