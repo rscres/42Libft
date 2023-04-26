@@ -6,7 +6,7 @@
 /*   By: renato <renato@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:29:24 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/26 13:56:27 by renato           ###   ########.fr       */
+/*   Updated: 2023/04/26 16:22:56 by renato           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,24 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t		i;
-	char		*temp;
 	char		*buf_dest;
 	const char	*buf_src;
 
-	temp = malloc(ft_strlen(dest) * sizeof(int));
-	if (temp == NULL)
+	if (dest == NULL || src == NULL)
 		return (NULL);
-	i = 0;
-	buf_dest = dest;
+	buf_dest = (char *)dest;
 	buf_src = src;
-	while (i < n)
+	if (dest < src)
 	{
-		*(temp + i) = *(buf_src + i);
-		i++;
+		i = 0;
+		while (i++ < n)
+			*(buf_dest + i - 1) = *(buf_src + i - 1);
 	}
-	i = 0;
-	while (i < n)
+	else
 	{
-		*(buf_dest + i) = *(temp + i);
-		i++;
+		i = n;
+		while (i-- > 0)
+			*(buf_dest + i) = *(buf_src + i);
 	}
 	return (dest);
 }
