@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: renato <renato@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 17:05:46 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/25 17:39:28 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/04/26 14:29:21 by renato            #+#    #+#             */
+/*   Updated: 2023/04/26 17:40:44 by renato           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	*ft_calloc(size_t nitems, size_t size)
 {
 	void	*alloc;
 
-	alloc = malloc(size * sizeof(int));
+	alloc = malloc(nitems * size);
+	if (alloc == NULL)
+		return (NULL);
 	ft_bzero(alloc, sizeof(alloc));
 	return (alloc);
 }
