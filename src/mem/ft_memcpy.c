@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: renato <renato@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 13:16:09 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/25 13:02:25 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/04/26 14:17:04 by renato           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		i++;
 	}
 	*(buf_dest + i) = '\0';
-	return (buf_dest);
+	return (dest);
 }
