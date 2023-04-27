@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/27 13:59:33 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/27 15:52:28 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/04/27 15:41:08 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/04/27 15:58:13 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (s[i])
-		f(i, s[i++]);
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
