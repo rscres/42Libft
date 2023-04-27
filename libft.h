@@ -6,7 +6,7 @@
 /*   By: renato <renato@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 15:53:03 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/26 18:10:06 by renato           ###   ########.fr       */
+/*   Updated: 2023/04/26 20:15:07 by renato           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ char	*ft_strrchr(const char *str, int c);
 char	*ft_strstr(const char *str, const char *to_find);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 int		ft_strlen(const char *str);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
