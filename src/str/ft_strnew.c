@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/26 17:49:27 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/27 11:58:48 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/04/27 12:26:44 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/04/27 12:34:25 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strnew(size_t size)
 {
-	size_t	i;
-	size_t	j;
-	char	*dest;
+	char	*newstr;
+	int		i;
 
-	dest = malloc(len * sizeof(char));
-	if (dest == NULL)
-		return (NULL);
-	i = (size_t)start;
-	j = 0;
-	while (j < len)
-	{
-		*(dest + j) = *(s + i);
-		i++;
-		j++;
-	}
-	*(dest + j) = '\0';
-	return (dest);
+	newstr = malloc((size + 1) * sizeof(char));
+	i = 0;
+	while (i <= size)
+		newstr[i++] = '\0';
+	return (newstr);
 }
