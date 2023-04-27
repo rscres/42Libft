@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 11:21:30 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/27 15:39:23 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/04/27 13:59:33 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/04/27 15:33:46 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, const char *src, unsigned int nb)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	int				i;
-	unsigned int	j;
-
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0' && j < nb)
-		dest[i++] = src[j++];
-	dest[i] = '\0';
-	return (dest);
+	while (*s)
+		f(s++);
 }

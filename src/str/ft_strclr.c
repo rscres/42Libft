@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 11:21:30 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/27 15:39:23 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/04/27 13:01:01 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/04/27 13:54:55 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, const char *src, unsigned int nb)
+void	ft_strclr(char *s)
 {
-	int				i;
-	unsigned int	j;
-
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0' && j < nb)
-		dest[i++] = src[j++];
-	dest[i] = '\0';
-	return (dest);
+	while (*s)
+		*s++ = '\0';
+	*s = '\0';
 }
