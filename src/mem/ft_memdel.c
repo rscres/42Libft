@@ -6,7 +6,7 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 12:00:09 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/27 12:23:29 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:52:14 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_memdel(void **ap)
 {
-	free(*ap);
-	*ap = NULL;
+	if (*ap)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
 }
