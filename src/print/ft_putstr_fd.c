@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 18:48:00 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/27 16:01:11 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/04/27 17:56:24 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/04/27 18:06:54 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *str)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	while (*str)
-	{
-		ft_putchar(*str);
-		str++;
-	}
+	while (*s)
+		write(fd, s++, 1);
 }
