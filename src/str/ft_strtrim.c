@@ -6,7 +6,7 @@
 /*   By: renato <renato@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 23:50:46 by renato            #+#    #+#             */
-/*   Updated: 2023/04/28 00:23:00 by renato           ###   ########.fr       */
+/*   Updated: 2023/04/28 15:50:17 by renato           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*ft_strtrim(char const *s)
 		len--;
 	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
 		start++;
-
 	trim = malloc((len - start) * sizeof(char));
 	while (start < len - 1)
 		trim[i++] = s[start++];
