@@ -6,7 +6,7 @@
 /*   By: renato <renato@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 15:53:03 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/28 00:04:27 by renato           ###   ########.fr       */
+/*   Updated: 2023/05/01 23:09:51 by renato           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		ft_isalnum(int a);
 
 // String functions
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
+char	**ft_strsplit(char const *s, char c);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strncat(char *dest, const char *src, unsigned int nb);
 char	*ft_strcpy(char *dest, const char *src);
@@ -40,7 +41,7 @@ char	*ft_strstr(const char *str, const char *to_find);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s);
+char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strnew(size_t size);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
@@ -67,6 +68,7 @@ void	ft_bzero(void *s, size_t n);
 
 // Convertion functions
 int		ft_atoi(const char *str);
+char	*ft_itoa(int n);
 
 // Print functions
 void	ft_putchar(char c);
