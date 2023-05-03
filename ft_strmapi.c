@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/24 17:09:17 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/25 13:12:47 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/04/27 21:11:10 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/05/02 13:56:31 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t		i;
-	const char	*p1;
-	const char	*p2;
+	char				*newstr;
+	unsigned int		i;
 
 	i = 0;
-	p1 = ptr1;
-	p2 = ptr2;
-	while (i < num)
+	newstr = malloc(ft_strlen(s) * sizeof(char));
+	while (s[i])
 	{
-		if (*(p1 + i) != *(p2 + i))
-			return (*(p1 + i) - *(p2 + i));
+		newstr[i] = f(i, s[i]);
 		i++;
 	}
-	return (0);
+	return (newstr);
 }

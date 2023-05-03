@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 15:01:21 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/25 18:20:04 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/04/27 23:50:46 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/05/02 13:58:37 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
+	int		start;
+	int		len;
+	int		i;
+	int		j;
+	char	*trim;
 
+	len = ft_strlen(s1);
+	start = 0;
 	i = 0;
-	if (*to_find == '\0')
-		return (str);
-	while (str[i] != '\0' && i < len)
-	{
-		if ((str[i] == to_find[0]) && ft_strcmp(&str[i], to_find))
-			return (&str[i]);
-		i++;
-	}
-	return (0);
+	j = ft_strlen(set);
+	while (s1[len] == set[j--])
+		len--;
+	j = 0;
+	while (s1[start] == set[j++])
+		start++;
+	trim = malloc((len - start + 1) * sizeof(char));
+	while (start <= len)
+		trim[i++] = s1[start++];
+	trim[i] = '\0';
+	return (trim);
 }
