@@ -6,7 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:30:14 by rseelaen          #+#    #+#             */
+<<<<<<< HEAD:src/ft_split.c
 /*   Updated: 2023/05/03 19:23:45 by rseelaen         ###   ########.fr       */
+=======
+/*   Updated: 2023/05/02 13:55:48 by rseelaen         ###   ########.fr       */
+>>>>>>> a678bcf5fcdb4e9542e88b217496165aca91f1c4:src/ft_strsplit.c
 /*                                                                            */
 /* ************************************************************************** */
 
