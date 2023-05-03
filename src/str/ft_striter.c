@@ -6,7 +6,7 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 13:59:33 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/27 15:52:28 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/03 11:44:57 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-		f(i, s[i++]);
+	while (*s)
+		f(s++);
 }

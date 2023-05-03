@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:30:14 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/02 13:55:48 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/03 19:23:45 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 
-char	**ft_strsplit(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int			count;
 	int			i;
