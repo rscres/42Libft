@@ -6,7 +6,7 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 23:50:46 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/03 20:14:58 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/03 20:19:48 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,15 +54,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trim = NULL;
 	while (*s1)
 	{
-		if (!ft_strchr(set, *(s1)))
+		if (!ft_strchr(set, *s1))
 			break ;
 		s1++;
 	}
-	while (end)
+	while (end != s1)
 	{
-
+		if (!ft_strchr(set, *end))
+			break ;
+		end--;
 	}
-	printf("%d\n", start);
+	printf("%d %s\n", end, s1);
 	return ((char *)set);
 }
 
