@@ -6,36 +6,38 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 15:42:42 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/02 21:01:33 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/03 16:24:33 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	is_whitespace(char c)
+{
+	if (c == ' ' || c == '\t' || c == '\n' || c == '\v'
+		|| c == '\f' || c == '\r')
+		return (1);
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	x;
+	int	num;
 	int	minus;
 
-	x = 0;
-	minus = 1;
-	while (*str)
+	num = 0;
+	minus = 0;
+	while (is_whitespace(*str))
+		str++;
+	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-		{
-			if (!(ft_isdigit(*(str + 1))))
-				return (0);
 			minus = -1;
-		}
-		if (ft_isdigit(*str))
-		{
-			x = x * 10 + (*str - '0');
-			if (!(ft_isdigit(*(str + 1))))
-				break ;
-		}
 		str++;
 	}
+	while (ft_isdigit(*str))
+		num = num * 10 + (*str++ - '0');
 	if (minus == -1)
-		x *= -1;
-	return (x);
+		num = -num;
+	return (num);
 }
