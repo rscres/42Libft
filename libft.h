@@ -6,9 +6,10 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: Invalid date        by                   #+#    #+#             */
-/*   Updated: 2023/05/03 20:35:20 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/03 20:40:44 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 
 #ifndef LIBFT_H
