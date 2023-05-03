@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: renato <renato@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 15:53:03 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/01 23:09:51 by renato           ###   ########.fr       */
+/*   Updated: 2023/05/02 18:00:16 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		ft_isalnum(int a);
 
 // String functions
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strncat(char *dest, const char *src, unsigned int nb);

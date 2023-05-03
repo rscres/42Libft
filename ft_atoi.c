@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 11:21:23 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/04/25 20:28:56 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/03/17 15:42:42 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/05/02 21:01:33 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+int	ft_atoi(const char *str)
 {
-	int	i;
-	int	offset;
-	int	src_len;
+	int	x;
+	int	minus;
 
-	offset = ft_strlen(dest);
-	src_len = ft_strlen(src);
-	i = 0;
-	if ((int)size <= offset)
-		src_len += size;
-	else
-		src_len += offset;
-	while (*(src + i) != '\0' && (offset + 1) < (int)size)
-		*(dest + offset++) = *(src + i++);
-	*(dest + offset) = '\0';
-	return (src_len);
+	x = 0;
+	minus = 1;
+	while (*str)
+	{
+		if (*str == '-')
+		{
+			if (!(ft_isdigit(*(str + 1))))
+				return (0);
+			minus = -1;
+		}
+		if (ft_isdigit(*str))
+		{
+			x = x * 10 + (*str - '0');
+			if (!(ft_isdigit(*(str + 1))))
+				break ;
+		}
+		str++;
+	}
+	if (minus == -1)
+		x *= -1;
+	return (x);
 }
