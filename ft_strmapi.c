@@ -5,11 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: Invalid date        by                   #+#    #+#             */
-/*   Updated: 2023/05/03 20:42:18 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/05/03 21:06:20 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/05/03 21:06:24 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 

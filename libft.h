@@ -5,12 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: Invalid date        by                   #+#    #+#             */
-/*   Updated: 2023/05/03 20:40:44 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/05/03 21:05:47 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/05/04 18:04:23 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #ifndef LIBFT_H
 # define LIBFT_H

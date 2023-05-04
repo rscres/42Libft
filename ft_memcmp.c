@@ -6,7 +6,7 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 17:09:17 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/02 19:10:35 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/03 21:05:16 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 		{
 			if (*(p1 + i) > *(p2 + i))
 				return (-1);
-			else 
+			else
 				return (1);
 		}
 		i++;
