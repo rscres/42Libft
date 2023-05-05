@@ -1,5 +1,5 @@
 HEADER = ./includes
-SRC = $(wildcard ./*.c)
+SRC = $(wildcard ./src/*.c)
 CC = gcc
 FLAGS = -Wall -Werror -Wextra
 NAME = libft.a
