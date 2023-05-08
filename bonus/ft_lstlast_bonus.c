@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 17:47:26 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/08 12:41:21 by rseelaen         ###   ########.fr       */
+/*   Created: 2023/05/08 12:38:38 by rseelaen          #+#    #+#             */
+/*   Updated: 2023/05/08 13:07:50 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,20 @@ int	ft_lstsize(t_list *lst)
 	return (size);
 }
 
+t_list	*ft_lstlast(t_list *lst)
+{
+	t_list	*current;
+
+	current = lst;
+	if (!lst)
+		return (NULL);
+	while (current->next != NULL)
+	{
+		current = current->next;
+	}
+	return (current);
+}
+
 int main()
 {
     // Create a linked list with three nodes
@@ -64,7 +78,8 @@ int main()
         printf("%d: %s\n", i++, (char *)current->content);
         current = current->next;
     }
-
 	printf("%d\n", ft_lstsize(head));
+	t_list *last = ft_lstlast(head);
+	printf("%s\n", (char *)last->content);
     return 0;
 }
