@@ -6,7 +6,7 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 15:33:26 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/05 17:35:54 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/09 13:01:34 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strdup(const char *src)
 	i = 0;
 	len = ft_strlen(src);
 	dest = malloc((len + 1) * sizeof(char));
+	if (!dest)
+		return (NULL);
 	while (src[i])
 	{
 		dest[i] = src[i];

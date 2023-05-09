@@ -6,7 +6,7 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 13:00:50 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/05 17:36:11 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/09 12:33:55 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ char	**ft_split(char const *s, char c)
 
 	count = count_words(s, c);
 	arr = (char **)malloc((count + 1) * sizeof(char *));
+	if (!arr)
+		return (NULL);
 	pos = 0;
 	begin = 0;
 	i = 0;
