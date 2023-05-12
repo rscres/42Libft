@@ -6,7 +6,7 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 17:18:10 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/09 20:08:54 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/12 15:50:06 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,26 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*current;
-	t_list	*new;
+	t_list	*new_lst;
 	t_list	*head;
 
-	current = lst;
-	new = ft_lstnew(f(current->content));
-	current = current->next;
-	while (!current)
+	if (!lst || !del || !f)
+		return (NULL);
+	new_lst = ft_lstnew(f(lst->content));
+	if (!new_lst)
+		return (NULL);
+	head = new_lst;
+	while (!lst)
 	{
-		ft_lstadd_back(new, ft_lstnew(f(current->content)));
-		current = current->next;
+		new_lst = ft_lstnew(f(new_lst->content));
+		if (!ft_lstnew(f(new_lst->content)))
+		{
+			del(new_lst->content);
+			return (NULL);
+		}
+		ft_lstadd_back(&head, new_lst);
+		lst = lst->next;
+		new_lst = new_lst->next;
 	}
-	return (new);
+	return (new_lst);
 }
