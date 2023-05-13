@@ -6,7 +6,7 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 17:18:10 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/12 15:50:06 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/12 21:55:37 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*current;
 	t_list	*new_lst;
 	t_list	*head;
 
@@ -50,17 +49,17 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (!new_lst)
 		return (NULL);
 	head = new_lst;
-	while (!lst)
+	lst = lst->next;
+	while (lst)
 	{
-		new_lst = ft_lstnew(f(new_lst->content));
-		if (!ft_lstnew(f(new_lst->content)))
+		new_lst->next = ft_lstnew(f(lst->content));
+		new_lst = new_lst->next;
+		if (!new_lst)
 		{
 			del(new_lst->content);
 			return (NULL);
 		}
-		ft_lstadd_back(&head, new_lst);
 		lst = lst->next;
-		new_lst = new_lst->next;
 	}
-	return (new_lst);
+	return (head);
 }

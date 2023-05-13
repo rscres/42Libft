@@ -6,7 +6,7 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 18:43:54 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/05 17:35:06 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/12 21:58:01 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *str, int c)
 		return ((char *)str + ft_strlen(str));
 	if (!ft_isascii(c))
 		return ((char *)str);
-	i = strlen((char *)str);
+	i = ft_strlen((char *)str);
 	while (i > 0)
 	{
 		if (*(str + i - 1) == c)
