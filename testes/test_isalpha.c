@@ -14,7 +14,17 @@ MU_TEST(a_isalpha)
 MU_TEST(num_isalpha)
 {
 	int expected_result = 0;
-	int to_be_tested = 2;
+	int to_be_tested = '2';
+
+	int test_result = ft_isalpha(to_be_tested);
+
+	mu_assert_int_eq(expected_result, test_result);
+}
+
+MU_TEST(null_isalpha)
+{
+	int expected_result = 0;
+	int to_be_tested = "";
 
 	int test_result = ft_isalpha(to_be_tested);
 
@@ -24,7 +34,8 @@ MU_TEST(num_isalpha)
 MU_TEST_SUITE(test_suite)
 {
 	MU_RUN_TEST(a_isalpha);
-	MU_RUN_TEST(num_isalpha);
+	MU_RUN_TEST(num_isnotalpha);
+	MU_RUN_TEST(null_isnotalpha);
 }
 
 int main(int argc, char **argv)
