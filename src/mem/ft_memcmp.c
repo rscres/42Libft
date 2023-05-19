@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 17:09:17 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/12 21:56:59 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:46:24 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 {

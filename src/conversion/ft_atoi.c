@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 15:42:42 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/05 17:37:57 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:46:47 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 static int	is_whitespace(char c)
 {

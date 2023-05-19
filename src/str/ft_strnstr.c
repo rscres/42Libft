@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:01:21 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/05 17:35:10 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:48:55 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 static int	cmp(const char *s1, const char *s2)
 {

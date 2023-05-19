@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 11:21:30 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/05 17:35:25 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:48:37 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 char	*ft_strncat(char *dest, const char *src, unsigned int nb)
 {

@@ -1,5 +1,5 @@
 HEADER = ./includes
-SRC = $(wildcard ./src/*.c)
+SRC = $(wildcard ./src/*/*.c)
 CC = gcc
 FLAGS = -Wall -Werror -Wextra
 NAME = libft.a
@@ -14,7 +14,7 @@ $(NAME): $(OBJ)
 	$(CC) $(FLAGS) -I $(HEADER) -c $< -o $@
 
 clean:
-	rm -rf */*.o
+	rm -rf ./src/*/*.o
 	
 fclean: clean
 	rm -rf libft.a	

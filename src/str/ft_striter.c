@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 13:59:33 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/03 11:44:57 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:48:13 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {

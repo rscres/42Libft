@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:01:35 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/09 12:29:29 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:48:25 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

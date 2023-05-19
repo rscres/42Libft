@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 15:41:08 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/05 17:35:49 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:48:16 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

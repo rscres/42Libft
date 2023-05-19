@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 14:57:55 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/05 17:32:44 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:47:14 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 int	ft_toupper(int a)
 {

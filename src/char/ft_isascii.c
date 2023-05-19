@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 14:52:20 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/05 17:37:34 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:47:02 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 int	ft_isascii(int a)
 {

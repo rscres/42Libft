@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 13:16:09 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/05 17:36:40 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:46:30 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 21:16:37 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/02 13:56:13 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:48:10 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 int	ft_strequ(char const *s1, char const *s2)
 {

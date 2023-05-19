@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 13:00:50 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/09 12:33:55 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:47:48 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 static int	count_words(const char *s, char c)
 {

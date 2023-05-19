@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 12:13:33 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/05 17:35:59 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:47:59 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

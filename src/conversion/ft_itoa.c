@@ -6,11 +6,11 @@
 /*   By: rseelaen <rseelaen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 12:05:34 by rseelaen          #+#    #+#             */
-/*   Updated: 2023/05/12 21:56:45 by rseelaen         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:46:51 by rseelaen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 static int	intlen(int n)
 {	
