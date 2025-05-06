@@ -1,6 +1,6 @@
 # Libft
 
-In this project our aim was to recreate a few of the functions from the stdlib and create others to be used in future projects.
+This project contains the recreation of some libc functions, like calloc and memcpy, and the creation of new ones, like itoa, as a means of creating our own library to be used in future projects, as most other course projects allows for no external libraries or limited use of them.
 
 ## Stdlib functions
 ### Char functions 
